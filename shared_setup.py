@@ -155,12 +155,10 @@ def cleanup(prefix=''):
 def make_setup(name='base',prefix=''):
     """Create the setup.py
         - default is base
+
+        Unneeded and obsolete
     """
-    fn = '%ssetup_%s.py' % (prefix, name)
-    if os.path.isfile(fn):
-        shutil.copyfile(fn, 'setup.py')
-    else:
-        log.error("setup file %s for name %s not found" % (fn, name))
+    pass
 
 def sanitize(v):
     """Transforms v into a sensible string for use in setup.cfg."""
