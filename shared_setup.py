@@ -1,33 +1,34 @@
 #!/usr/bin/env python
 # -*- coding: latin-1 -*-
 #
-# Copyright 2009-2012 Ghent University
-# Copyright 2009-2012 Stijn De Weirdt
-# Copyright 2012 Andy Georges
+# Copyright 2009-2013 Ghent University
 #
-# This file is part of VSC-tools,
+# This file is part of vsc-processcontrol,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
 # with support of Ghent University (http://ugent.be/hpc),
 # the Flemish Supercomputer Centre (VSC) (https://vscentrum.be/nl/en),
 # the Hercules foundation (http://www.herculesstichting.be/in_English)
 # and the Department of Economy, Science and Innovation (EWI) (http://www.ewi-vlaanderen.be/en).
 #
-# http://github.com/hpcugent/VSC-tools
+# http://github.com/hpcugent/vsc-processcontrol
 #
-# VSC-tools is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation v2.
+# vsc-processcontrol is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Library General Public License as
+# published by the Free Software Foundation, either version 2 of
+# the License, or (at your option) any later version.
 #
-# VSC-tools is distributed in the hope that it will be useful,
+# vsc-processcontrol is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
+# GNU Library General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with VSC-tools. If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU Library General Public License
+# along with vsc-processcontrol. If not, see <http://www.gnu.org/licenses/>.
 #
 """
-Shared module for VSC-tools setup
+@author: Stijn De Weirdt (Ghent University)
+@author: Andy Georges (Ghent University)
+Shared module for vsc-processcontrol setup
 """
 import glob
 import os
@@ -84,7 +85,7 @@ except:
 ag = ('Andy Georges', 'andy.georges@ugent.be')
 jt = ('Jens Timmermans', 'jens.timmermans@ugent.be')
 kh = ('Kenneth Hoste', 'kenneth.hoste@ugent.be')
-lm = ('Luis Fernando Munoz Meji­as', 'luis.munoz@ugent.be')
+lm = ('Luis Fernando Munoz MejiÂ­as', 'luis.munoz@ugent.be')
 sdw = ('Stijn De Weirdt', 'stijn.deweirdt@ugent.be')
 wdp = ('Wouter Depypere', 'wouter.depypere@ugent.be')
 
@@ -124,8 +125,8 @@ class vsc_sdist(sdist):
 
 # shared target config
 SHARED_TARGET = {
-    'url': 'http://hpcugent.github.com/VSC-tools',
-    'download_url': 'https://github.com/hpcugent/VSC-tools',
+    'url': 'http://hpcugent.github.com/vsc-processcontrol',
+    'download_url': 'https://github.com/hpcugent/vsc-processcontrol',
     'package_dir': {'': 'lib'},
     'cmdclass': {
         "install_scripts": vsc_install_scripts,
@@ -150,15 +151,15 @@ def cleanup(prefix=''):
         if os.path.isfile(ffn):
             os.remove(ffn)
 
-    make_setup(prefix=prefix)
-
 def make_setup(name='base',prefix=''):
     """Create the setup.py
         - default is base
-
-        Unneeded and obsolete
     """
-    pass
+    fn = '%ssetup_%s.py' % (prefix, name)
+    if os.path.isfile(fn):
+        shutil.copyfile(fn, 'setup.py')
+    else:
+        log.error("setup file %s for name %s not found" % (fn, name))
 
 def sanitize(v):
     """Transforms v into a sensible string for use in setup.cfg."""
@@ -223,8 +224,6 @@ def action_target(target, setupfn=setup, extra_sdist=[]):
     name = '_'.join(target['name'].split('-')[1:])
 
     cleanup()
-
-    make_setup(name)
 
     build_setup_cfg_for_bdist_rpm(target)
     x = parse_target(target)
