@@ -37,7 +37,7 @@ from shared_setup import action_target
 PACKAGE = {
     'name': 'vsc-processcontrol',
     'install_requires': ['vsc-processcontrol >= 0.95'],
-    'version': '0.90',
+    'version': '0.91',
     'author': [sdw],
     'maintainer': [sdw],
     'packages': ['vsc.processcontrol'],
