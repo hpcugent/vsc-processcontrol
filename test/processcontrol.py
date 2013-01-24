@@ -1,7 +1,6 @@
 #
 #
 # Copyright 2013-2013 Ghent University
-# Copyright 2013-2013 Stijn De Weirdt
 #
 # This file is part of VSC-tools,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -24,6 +23,10 @@
 # You should have received a copy of the GNU General Public License
 # along with VSC-tools. If not, see <http://www.gnu.org/licenses/>.
 #
+"""
+@author: Stijn De Weirdt (Ghent University)
+
+"""
 from unittest import TestCase, TestLoader
 from vsc.processcontrol.cpusett import CpuSetT
 from vsc.processcontrol.algorithm import BasicCore

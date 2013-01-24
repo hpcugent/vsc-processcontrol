@@ -1,6 +1,5 @@
 #
 # Copyright 2013-2013 Ghent University
-# Copyright 2013-2013 Stijn De Weirdt
 #
 # This file is part of VSC-tools,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -24,6 +23,8 @@
 # along with VSC-tools. If not, see <http://www.gnu.org/licenses/>.
 #
 """
+@author: Stijn De Weirdt (Ghent University)
+
 Implement Priority and Affinity classes using vsc.utils.affinity
 """
 

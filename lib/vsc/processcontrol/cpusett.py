@@ -1,6 +1,5 @@
 #
 # Copyright 2013-2013 Ghent University
-# Copyright 2013-2013 Stijn De Weirdt
 #
 # This file is part of VSC-tools,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -24,6 +23,8 @@
 # along with VSC-tools. If not, see <http://www.gnu.org/licenses/>.
 #
 """
+@author: Stijn De Weirdt (Ghent University)
+
 A module to abstract cpu affinity interfaces
 """
 import ctypes
@@ -34,7 +35,7 @@ class CpuSetT(InitLog):
     """Class for the cpu bits from cpu_set_t struct
     Class is based on vsc.utils.affinity cpu_set_t
     """
-    DEFAULT_BIT=0
+    DEFAULT_BIT = 0
 
     CPU_MASK_T_TYPE = ctypes.c_ulong
     DEFAULT_CPUSETSIZE = ctypes.util.os.sysconf('SC_NPROCESSORS_CONF')
@@ -110,7 +111,7 @@ class CpuSetT(InitLog):
             prev = idx
         return ",".join(parsed_idx)
 
-    def set_cpus(self,cpus_list):
+    def set_cpus(self, cpus_list):
         """Given list, set it as cpus"""
         nr_cpus = len(cpus_list)
         if  nr_cpus > self.cpusetsize:
