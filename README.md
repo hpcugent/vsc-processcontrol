@@ -1,23 +1,15 @@
-# VSC-tools
+# vsc-processcontrol
 
-[![Build Status](https://jenkins1.ugent.be/job/VSC_tools/badge/icon)](https://jenkins1.ugent.be/job/VSC_tools/)
-
-Common tools used within our organization.
+[![Build Status](https://jenkins1.ugent.be/job/vsc-processcontrol/badge/icon)](https://jenkins1.ugent.be/job/vsc-processcontrol/)
 
 Originally created by the HPC team of Ghent University (http://ugent.be/hpc).
-
-
-# Namespaces and tools
-
-## vsc
-Common namespace used by all our python modules
 
 ## processcontrol
 vsc-processcontrol is a module to abstract process control like scheduler settings and
 affinity from actual implementations like vsc.affintiy and psutil.
 
 # License
-VSC-tools is made available under the GNU General Public License (GPL) version 2.
+vsc-processcontrol is made available under the GNU General Public License (GPL) version 2.
 
 # Acknowledgements
 VSC-tools was created with support of [Ghent University](http://www.ugent.be/en),
