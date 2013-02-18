@@ -28,7 +28,7 @@
 
 Some core parts for cpu pin placement algorithms
 """
-from .processcontrol import InitLog
+from vsc.processcontrol.processcontrol import InitLog
 
 class Algorithm(InitLog):
     """Compute the process placement on a given number of cpus. Result is
