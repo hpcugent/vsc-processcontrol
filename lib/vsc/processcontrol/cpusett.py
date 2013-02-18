@@ -30,7 +30,7 @@ A module to abstract cpu affinity interfaces
 """
 import ctypes
 import ctypes.util
-from .processcontrol import InitLog
+from vsc.processcontrol.processcontrol import InitLog
 
 class CpuSetT(InitLog):
     """Class for the cpu bits from cpu_set_t struct
