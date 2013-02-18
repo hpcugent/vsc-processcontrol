@@ -79,7 +79,7 @@ class VSCAffinityBasic(VSCAffinity):
 
         # rel_cpus is a list relative to the usable cpus of cpusett.cpus
         for rel_idx, abs_idx in enumerate(allowed_cpus):
-            self.cpusett.cpus[abs_idx] = 1 if rel_idx in rel_cpus else 0
+            self.cpusett.cpus[abs_idx] = int(rel_idx in rel_cpus)
 
 if __name__ == '__main__':
     """Simple test code. Difficult to write unit tests because of direct dependency on hardware"""
