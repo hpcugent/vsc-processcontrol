@@ -24,14 +24,14 @@
 # along with vsc-processcontrol. If not, see <http://www.gnu.org/licenses/>.
 #
 """
-@author: Stijn De Weirdt (Ghent University)
-
 Some common classes and functions
+
+@author: Stijn De Weirdt (Ghent University)
 """
 import os
 
 try:
-    from vsc.fancylogger import getLogger
+    from vsc.utils.fancylogger import getLogger
 except:
     from logging import getLogger
 
