@@ -4,6 +4,9 @@
 
 Originally created by the HPC team of Ghent University (http://ugent.be/hpc).
 
+# Documentation
+https://jenkins1.ugent.be/job/vsc-processcontrol/Documentation/?
+
 ## processcontrol
 vsc-processcontrol is a module to abstract process control like scheduler settings and
 affinity from actual implementations like vsc.affintiy and psutil.
