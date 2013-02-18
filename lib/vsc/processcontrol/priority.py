@@ -29,7 +29,7 @@
 A module to abstract scheduler priority
 """
 
-from .processcontrol import ProcessControlBase, what_classes
+from vsc.processcontrol.processcontrol import ProcessControlBase, what_classes
 
 
 def what_priority(mode=None):
