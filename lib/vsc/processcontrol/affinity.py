@@ -28,8 +28,8 @@
 
 A module to abstract cpu affinity interfaces
 """
-from .processcontrol import ProcessControlBase, what_classes
-from .cpusett import CpuSetT
+from vsc.processcontrol.processcontrol import ProcessControlBase, what_classes
+from vsc.processcontrol.cpusett import CpuSetT
 
 def what_affinity(mode=None, algo=None):
     """What affinity classes are there?"""
