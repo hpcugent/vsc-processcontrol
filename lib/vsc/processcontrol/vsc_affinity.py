@@ -29,9 +29,9 @@
 Implement Priority and Affinity classes using vsc.utils.affinity
 """
 
-from .priority import Priority
-from .affinity import Affinity
-from .algorithm import BasicCore
+from vsc.processcontrol.priority import Priority
+from vsc.processcontrol.affinity import Affinity
+from vsc.processcontrol.algorithm import BasicCore
 try:
     from vsc.utils.affinity import sched_getaffinity, sched_setaffinity, cpu_set_t, getpriority, setpriority
     valid = True
