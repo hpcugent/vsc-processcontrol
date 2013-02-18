@@ -12,7 +12,8 @@ vsc-processcontrol is a module to abstract process control like scheduler settin
 affinity from actual implementations like vsc.affintiy and psutil.
 
 # License
-vsc-processcontrol is made available under the GNU General Public License (GPL) version 2.
+`vsc-processcontrol` is made available under the Library Public License (GPL) version 2, 
+or at your choice, any later version.
 
 # Acknowledgements
 VSC-tools was created with support of [Ghent University](http://www.ugent.be/en),
