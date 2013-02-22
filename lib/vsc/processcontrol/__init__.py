@@ -29,7 +29,4 @@
 processcontrol is a module to abstract different utilities for
 e.g. scheduling priority, affinity, ...
 """
-import pkg_resources
-pkg_resources.declare_namespace(__name__)
-
 import vsc_affinity
