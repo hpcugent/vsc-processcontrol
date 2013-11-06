@@ -57,7 +57,10 @@ class Priority(ProcessControlBase):
 
     @classmethod
     def is_priority_mode(cls, mode):
-        return mode.lower() == cls.PRIORITY_MODE.lower() if cls.PRIORITY_MODE is not None else None
+        if cls.PRIORITY_MODE is not None:
+            return mode.lower() == cls.PRIORITY_MODE.lower()
+        else:
+            return None
 
     def _sanitize_range(self, prio):
         """Check if prio is in valid range
