@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 import sys
 import os
-import processcontrol as p
+import test.processcontrol as p
 import unittest
 
 suite = unittest.TestSuite([p.suite()])
