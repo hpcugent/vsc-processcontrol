@@ -58,11 +58,17 @@ class Affinity(ProcessControlBase):
 
     @classmethod
     def is_affinity_mode(cls, mode):
-        return mode.lower() == cls.AFFINITY_MODE.lower() if cls.AFFINITY_MODE is not None else None
+        if cls.AFFINITY_MODE is not None
+            return mode.lower() == cls.AFFINITY_MODE.lower()
+        else:
+            return None
 
     @classmethod
     def is_algorithm(cls, name):
-        return name.lower() == cls.AFFINITY_ALGORITHM.lower() if cls.AFFINITY_ALGORITHM is not None else None
+        if cls.AFFINITY_ALGORITHM is not None
+            return name.lower() == cls.AFFINITY_ALGORITHM.lower()
+        else:
+            return None
 
     def _get_affinity(self):
         """Actually get the affinity of self.pid and save in self.cpusett
