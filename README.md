@@ -1,11 +1,15 @@
 # vsc-processcontrol
 
-[![Build Status](https://jenkins1.ugent.be/job/vsc-processcontrol/badge/icon)](https://jenkins1.ugent.be/job/vsc-processcontrol/)
+### Build Status
+- Python 2.4 : [![Build Status](https://jenkins1.ugent.be/job/vsc-processcontrol-python24/badge/icon)](https://jenkins1.ugent.be/job/vsc-processcontrol-python24/)
+- Python 2.6 : [![Build Status](https://jenkins1.ugent.be/job/vsc-processcontrol-python26/badge/icon)](https://jenkins1.ugent.be/job/vsc-processcontrol-python26/)
+- Python 2.7 : [![Build Status](https://jenkins1.ugent.be/job/vsc-processcontrol-python27/badge/icon)](https://jenkins1.ugent.be/job/vsc-processcontrol-python27/)
+
 
 Originally created by the HPC team of Ghent University (http://ugent.be/hpc).
 
 # Documentation
-https://jenkins1.ugent.be/job/vsc-processcontrol/Documentation/?
+https://jenkins1.ugent.be/job/vsc-processcontrol-python26/Documentation/?
 
 ## processcontrol
 vsc-processcontrol is a module to abstract process control like scheduler settings and
